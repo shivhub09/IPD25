@@ -1,0 +1,27 @@
+STEP 1: Data Cleansing
+Clean and preprocess your text data. Common steps include:
+- Removing unnecessary characters (e.g., special characters, numbers).
+- Converting text to lowercase.
+- Removing stop words.
+- Tokenization.
+
+STEP 2: LDA Modelling
+Use Latent Dirichlet Allocation (LDA) to model topics within your documents. This step helps in understanding the underlying structure of your data.
+
+STEP 3: Training Set
+Split your data into a training set and a test set. The training set will be used to train your model, and the test set will be used to evaluate its performance.
+
+STEP 4: Common Words Removal from Test Docs
+Remove common words from the test documents that might not provide significant information for anomaly detection. These could include words that are frequent across all documents.
+
+STEP 5: Vectors
+Represent your documents as vectors. You can use techniques like TF-IDF (Term Frequency-Inverse Document Frequency) or word embeddings (e.g., Word2Vec, GloVe) to convert text into numerical vectors.
+
+STEP 6: Clustering
+Apply clustering algorithms (e.g., k-means, hierarchical clustering) to group similar documents together. Clusters can help identify normal patterns within the data.
+
+STEP 7: Outlier Detection
+Use an outlier detection algorithm (e.g., Isolation Forest, One-Class SVM) to identify documents that deviate from the normal patterns established by the clusters. This step aims to find anomalies within the data.
+
+STEP 8: Detection
+Evaluate the performance of your model on the test set. Adjust parameters and refine the model as needed. The documents identified as outliers during the testing phase can be considered anomalies.
